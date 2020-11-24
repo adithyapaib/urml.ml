@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Url shortner</title>
+  </head>
+  <body>
+    <div class="area" ><ul class="circles"><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li></ul></div >
+    <div class="container">
+      <h2>URL Shortner</h2>
+
+      <% if (locals.error) { %>
+      <p class="error"><%= error %></p>
+      <% } %>
+  
+      <form action="/" method="post">
+        <input type="url" name="url" id="url" placeholder="Enter your URL" />
+        <input type="submit" value="Shrink" id="submit" />
+      </form>
+  
+      <div class="short-url">
+        <% if (locals.short_url) { %>
+        <a href="<%= short_url %>"><%= short_url %> </a>
+        <% } %>
+      </div>
+
+    </div>
+   
+  </body>
+</html>
