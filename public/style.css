@@ -29,6 +29,10 @@
   z-index: 100000000;
 }
 
+.container .shortlinkk {
+  background: #000;
+}
+
 .container form {
   display: -webkit-box;
   display: -ms-flexbox;

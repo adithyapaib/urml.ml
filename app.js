@@ -74,4 +74,4 @@ mongoose.connect('mongodb+srv://adithya:saymyname@cluster0.h6usl.mongodb.net/<db
       res.render('index', { error: err.message })
     })
     
-    app.listen(5000, () => console.log('🌏 on port 4000...'))
+    app.listen(5000, () => console.log('🌏 on port 5000...'))
