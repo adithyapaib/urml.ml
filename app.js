@@ -44,8 +44,8 @@ mongoose.connect('mongodb+srv://adithya:saymyname@cluster0.h6usl.mongodb.net/<db
         const shortUrl = new ShortUrl({ url: url, shortId: shortId.generate() })
         const result = await shortUrl.save()
         res.render('index', {
-          // short_url: `${req.hostname}/${urlExists.shortId}`,
-          short_url: `${req.headers.host}/${result.shortId}`,
+           short_url: `${req.hostname}/${urlExists.shortId}`,
+          // short_url: `${req.headers.host}/${result.shortId}`, 
         })
       } catch (error) {
         next(error)
@@ -74,4 +74,4 @@ mongoose.connect('mongodb+srv://adithya:saymyname@cluster0.h6usl.mongodb.net/<db
       res.render('index', { error: err.message })
     })
     
-    app.listen(5000, () => console.log('🌏 on port 5000...'))
+    app.listen(8000, () => console.log('🌏 on port 8000...'))
