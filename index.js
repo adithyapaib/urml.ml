@@ -6,6 +6,7 @@ const createHttpError = require('http-errors');
 const path = require('path')
 const app = express();
 const ShortUrl = require('./models/model');
+require('dotenv').config()
 
 
 app.use(express.static(path.join(__dirname, 'public')));
@@ -13,7 +14,7 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 app.set('view engine', 'ejs')
 
-mongoose.connect('mongodb+srv://adithya:saymyname@cluster0.h6usl.mongodb.net/<dbname>?retryWrites=true&w=majority', {
+mongoose.connect(process.env.DB, {
     dbName: 'lenk-cf',
     useNewUrlParser: true,
     useUnifiedTopology: true,
