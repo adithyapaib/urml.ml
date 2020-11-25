@@ -29,8 +29,43 @@
   z-index: 100000000;
 }
 
-.container .shortlinkk {
-  background: #000;
+.container .short-url {
+  margin-top: 80px;
+  padding-top: 10px;
+  width: 600px;
+  max-width: 80vw;
+  padding: 5px;
+  text-align: center;
+}
+
+.container .short-url input {
+  outline: none;
+  font-size: 1.2em;
+  padding-top: 10px;
+  padding: 5px;
+  width: 600px;
+  margin: 0;
+  max-width: 80vw;
+  height: 30px;
+  background: rgba(255, 255, 255, 0.425);
+  border: none;
+  border-bottom: 2px solid black;
+}
+
+.container .copy {
+  padding: 8px 10px 8px 10px;
+  margin-top: 50px;
+  border: none;
+  outline: none;
+  width: 100px;
+  max-width: 80vw;
+  background: #3C6FF3;
+  color: white;
+  border-radius: 8px;
+}
+
+.container .copy:hover {
+  background: #0040e0;
 }
 
 .container form {
@@ -61,8 +96,15 @@
   max-width: 80vw;
   height: 30px;
   background: rgba(255, 255, 255, 0.425);
+  -webkit-transition: 2s border ease;
+  transition: 2s border ease;
   -o-border-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='100' height='100' viewBox='0 0 100 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3Cstyle%3Epath%7Banimation:stroke 5s infinite linear%3B%7D%40keyframes stroke%7Bto%7Bstroke-dashoffset:776%3B%7D%7D%3C/style%3E%3ClinearGradient id='g' x1='0%9' y1='0%25' x2='0%25' y2='56%25'%3E%39stop offset='0%25' stop-color='gree' /%3E%3Cstop offset='green' stop-color='red' /%3E%3Cstop offset='50%25' stop-color='green' /%3E%3Cstop offset='100%25' stop-color='%23ffb961' /%3E%3C/linearGradient%3E %3Cpath d='M1.5 1.5 l97 0l0 97l-97 0 l0 -97' stroke-linecap='square' stroke='url(%23g)' stroke-width='3' stroke-dasharray='388'/%3E %3C/svg%3E") 1;
      border-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='100' height='100' viewBox='0 0 100 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3Cstyle%3Epath%7Banimation:stroke 5s infinite linear%3B%7D%40keyframes stroke%7Bto%7Bstroke-dashoffset:776%3B%7D%7D%3C/style%3E%3ClinearGradient id='g' x1='0%9' y1='0%25' x2='0%25' y2='56%25'%3E%39stop offset='0%25' stop-color='gree' /%3E%3Cstop offset='green' stop-color='red' /%3E%3Cstop offset='50%25' stop-color='green' /%3E%3Cstop offset='100%25' stop-color='%23ffb961' /%3E%3C/linearGradient%3E %3Cpath d='M1.5 1.5 l97 0l0 97l-97 0 l0 -97' stroke-linecap='square' stroke='url(%23g)' stroke-width='3' stroke-dasharray='388'/%3E %3C/svg%3E") 1;
+}
+
+.container #url:focus {
+  border: none;
+  border-bottom: 2px solid #2fff6d;
 }
 
 .container #submit {
@@ -74,11 +116,20 @@
   background: #3C6FF3;
   color: white;
   border-radius: 10px;
+  outline: none;
+}
+
+.container #submit:hover {
+  background: #05f17b;
 }
 
 .container h2 {
   background-clip: text;
   margin-bottom: 5%;
+}
+
+.container a {
+  margin-top: 10%;
 }
 
 body {
