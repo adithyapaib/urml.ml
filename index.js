@@ -44,7 +44,7 @@ mongoose.connect('mongodb+srv://adithya:saymyname@cluster0.h6usl.mongodb.net/<db
         const shortUrl = new ShortUrl({ url: url, shortId: shortId.generate() })
         const result = await shortUrl.save()
         res.render('index', {
-           short_url: `${req.hostname}/${urlExists.shortId}`,
+           short_url: `${req.hostname}/${result.shortId}`,
           // short_url: `${req.headers.host}/${result.shortId}`, 
         })
       } catch (error) {
