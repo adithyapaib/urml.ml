@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <meta name="theme-color" content="#000000">
-    <title>Url shortner</title>
+    <meta name="robots" content= "index, follow">
+    <title>Lenk.cf -Shorten long urls Instantly !</title>
+    <meta property="description" content="Lenk.cf is an open-source URL shortner built using NodeJS ExpressJS and MongoDB. For source please vist https://github.com/adithyapaib/lenk.cf"/>
+    <meta property="og:description" content="Lenk.cf is an open-source URL shortner built using NodeJS ExpressJS and MongoDB. For source please vist https://github.com/adithyapaib/lenk.cf"/>
+    <link rel="shortcut icon" href="https://img.icons8.com/fluent/16/000000/link.png" type="image/x-icon">
   </head>
   <body>
     <div class="area" ><ul class="circles"><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li></ul></div >
@@ -13,7 +17,7 @@
       <h2>URL Shortner</h2>
 
       <% if (locals.error) { %>
-      <p class="error"><%= error %></p>
+      <p class="error" style="color: red; margin-top: 10px; margin-bottom: 30px;"><%= error %></p>
       <% } %>
   
       <form action="/" method="post">
@@ -30,6 +34,9 @@
      
 
     </div>
+    <footer>
+      <p>Made with 💙 by <a href="https://adithyapai.com">Adithya Pai 💯</a></p>
+    </footer>
    <script>
      function myfn()
      {

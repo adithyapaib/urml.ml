@@ -25,7 +25,7 @@
           flex-direction: column;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  height: 90vh;
+  height: 100vh;
   z-index: 100000000;
 }
 
@@ -47,25 +47,42 @@
   margin: 0;
   max-width: 80vw;
   height: 30px;
-  background: rgba(255, 255, 255, 0.425);
-  border: none;
-  border-bottom: 2px solid black;
+  background-color: rgba(255, 255, 255, 0.15);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  -o-border-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='100' height='100' viewBox='0 0 100 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3Cstyle%3Epath%7Banimation:stroke 5s infinite linear%3B%7D%40keyframes stroke%7Bto%7Bstroke-dashoffset:776%3B%7D%7D%3C/style%3E%3ClinearGradient id='g' x1='0%9' y1='0%25' x2='0%25' y2='56%25'%3E%39stop offset='0%25' stop-color='gree' /%3E%3Cstop offset='green' stop-color='red' /%3E%3Cstop offset='50%25' stop-color='green' /%3E%3Cstop offset='100%25' stop-color='%23ffb961' /%3E%3C/linearGradient%3E %3Cpath d='M1.5 1.5 l97 0l0 97l-97 0 l0 -97' stroke-linecap='square' stroke='url(%23g)' stroke-width='3' stroke-dasharray='388'/%3E %3C/svg%3E") 1;
+     border-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='100' height='100' viewBox='0 0 100 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3Cstyle%3Epath%7Banimation:stroke 5s infinite linear%3B%7D%40keyframes stroke%7Bto%7Bstroke-dashoffset:776%3B%7D%7D%3C/style%3E%3ClinearGradient id='g' x1='0%9' y1='0%25' x2='0%25' y2='56%25'%3E%39stop offset='0%25' stop-color='gree' /%3E%3Cstop offset='green' stop-color='red' /%3E%3Cstop offset='50%25' stop-color='green' /%3E%3Cstop offset='100%25' stop-color='%23ffb961' /%3E%3C/linearGradient%3E %3Cpath d='M1.5 1.5 l97 0l0 97l-97 0 l0 -97' stroke-linecap='square' stroke='url(%23g)' stroke-width='3' stroke-dasharray='388'/%3E %3C/svg%3E") 1;
 }
 
 .container .copy {
-  padding: 8px 10px 8px 10px;
-  margin-top: 50px;
-  border: none;
-  outline: none;
-  width: 100px;
-  max-width: 80vw;
+  /* 
+    
+    border: none;
+    outline: none;
+    width: 100px;
+    max-width: 80vw;
+    background: #3C6FF3;
+    color: white;
+    border-radius: 8px; */
+  color: #fff !important;
   background: #3C6FF3;
-  color: white;
-  border-radius: 8px;
+  padding: 8px 10px 8px 10px;
+  border-radius: 5px;
+  outline: none;
+  width: 300px;
+  max-width: 70vw;
+  display: inline-block;
+  border: none;
+  margin-top: 50px;
+  -webkit-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
 }
 
 .container .copy:hover {
-  background: #0040e0;
+  background: #CB2545;
+  letter-spacing: 0.5px;
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
 }
 
 .container form {
@@ -96,6 +113,8 @@
   max-width: 80vw;
   height: 30px;
   background: rgba(255, 255, 255, 0.425);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
   -webkit-transition: 2s border ease;
   transition: 2s border ease;
   -o-border-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='100' height='100' viewBox='0 0 100 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3Cstyle%3Epath%7Banimation:stroke 5s infinite linear%3B%7D%40keyframes stroke%7Bto%7Bstroke-dashoffset:776%3B%7D%7D%3C/style%3E%3ClinearGradient id='g' x1='0%9' y1='0%25' x2='0%25' y2='56%25'%3E%39stop offset='0%25' stop-color='gree' /%3E%3Cstop offset='green' stop-color='red' /%3E%3Cstop offset='50%25' stop-color='green' /%3E%3Cstop offset='100%25' stop-color='%23ffb961' /%3E%3C/linearGradient%3E %3Cpath d='M1.5 1.5 l97 0l0 97l-97 0 l0 -97' stroke-linecap='square' stroke='url(%23g)' stroke-width='3' stroke-dasharray='388'/%3E %3C/svg%3E") 1;
@@ -115,25 +134,28 @@
   max-width: 80vw;
   background: #3C6FF3;
   color: white;
-  border-radius: 10px;
+  border-radius: 7px;
   outline: none;
 }
 
 .container #submit:hover {
-  background: #05f17b;
+  background: #CB2545;
+  letter-spacing: 1px;
+  -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  box-shadow: 5px 40px -10px rgba(0, 0, 0, 0.57);
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
 }
 
 .container h2 {
   background-clip: text;
-  margin-bottom: 5%;
+  margin-bottom: 8%;
+  font-weight: 700;
+  font-size: 2.2em;
 }
 
 .container a {
   margin-top: 10%;
-}
-
-body {
-  background: #ffffff;
 }
 
 footer {
@@ -146,7 +168,16 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
   width: 100%;
+}
+
+footer a {
+  text-decoration: none;
+  color: #ff0000;
 }
 
 .area {
