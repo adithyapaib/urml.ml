@@ -46,6 +46,10 @@
   }
 
      }
+     var metaThemeColor = document.querySelector("meta[name=theme-color]");
+     var colors = ['#01934D','#1320B8','#CB2545','#EBCC0C', '#000']
+     setInterval(function(){ 
+       metaThemeColor.setAttribute("content",colors[Math.floor(Math.random() * 5)]); }, 5000);
    </script>
   </body>
 </html>
