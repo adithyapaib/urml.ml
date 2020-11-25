@@ -74,4 +74,6 @@ mongoose.connect('mongodb+srv://adithya:saymyname@cluster0.h6usl.mongodb.net/<db
       res.render('index', { error: err.message })
     })
     
-    app.listen(8000, () => console.log('🌏 on port 8000...'))
+    app.listen(process.env.PORT || 8000, () => {
+      console.log('Listening on port 8000');
+    })
