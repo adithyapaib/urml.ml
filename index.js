@@ -11,7 +11,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 app.set('view engine', 'ejs')
-
 mongoose.connect(process.env.DB, {
     dbName: 'lenk-cf',
     useNewUrlParser: true,
@@ -65,7 +64,19 @@ mongoose.connect(process.env.DB, {
         next(error)
       }
     })
-    
+//extra
+app.set('trust proxy', true); 
+app.use((req, res, next) => {
+  if(!req.secure) return res.redirect('https://' + req.get('host') + req.url);
+  next();
+});
+
+// rest of this is just a demo
+app.use((req, res, next) => {
+  res.send(`HTTPS: ${req.secure}`); 
+  next();
+});
+    //extra end
     app.use((req, res, next) => {
       next(createHttpError.NotFound())
     })
