@@ -82,6 +82,6 @@ app.use((req, res, next) => {
       res.render('index', { error: err.message })
     })
     
-    app.listen(process.env.PORT || 8000, () => {
-      console.log('Listening on port 8000');
+    app.listen(process.env.PORT || 3000, () => {
+      console.log('Listening on port 3000');
     })
