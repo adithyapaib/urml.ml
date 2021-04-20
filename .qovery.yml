@@ -1,0 +1,15 @@
+---
+application:
+  name: "urml-ml"
+  project: "urml"
+  organization: "QoveryCommunity"
+databases:
+- type: "MONGODB"
+  name: "shorturls"
+  version: "4.4"
+routers:
+- name: "main-urml-ml"
+  routes:
+  - application_name: "urml-ml"
+    paths:
+    - "/*"
