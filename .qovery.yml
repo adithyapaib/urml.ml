@@ -1,0 +1,11 @@
+---
+application:
+  name: "urml-ml"
+  project: "shortner"
+  organization: "QoveryCommunity"
+routers:
+- name: "main-urml-ml"
+  routes:
+  - application_name: "urml-ml"
+    paths:
+    - "/*"
