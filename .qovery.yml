@@ -3,6 +3,9 @@ application:
   name: "urml-ml"
   project: "finaltry"
   organization: "QoveryCommunity"
+  custom_domains:
+  - branch: main
+    domain: lenk.cf
 routers:
 - name: "main-urml-ml"
   routes:
