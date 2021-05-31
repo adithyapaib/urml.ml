@@ -5,7 +5,7 @@ application:
   organization: "QoveryCommunity"
   custom_domains:
   - branch: main
-    domain: lenk.cf
+    domain: www.lenk.cf
 routers:
 - name: "main-urml-ml"
   routes:
