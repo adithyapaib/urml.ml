@@ -4,7 +4,7 @@ application:
   project: "finaltry"
   organization: "QoveryCommunity"
   custom_domains:
-  - branch: main
+  - branch: master
     domain: www.lenk.cf
 routers:
 - name: "main-urml-ml"
