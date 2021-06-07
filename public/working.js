@@ -6,6 +6,7 @@
       let alias = document.getElementById("alias");
       let url;
       let opt;
+      let hello = "hello";
       let loader = document.getElementById("loader")
       document.title = window.location.hostname + " | Shorten URL's with ease!";
       submit.addEventListener("click", getURL);
@@ -51,9 +52,7 @@
         url = await encodeURI(url);
         submit.disabled = true;
         let target = `${http}://${window.location.host}/p/${url}`;
-        console.log(target);
         let response = await fetch(target).then((response) => response.json());
-        console.log(response);
         ipbox.value = await `${http}://${window.location.host}/${response}`;
         var r = await `${http}://${window.location.host}/${response}`;
         submit.value = "copy";
@@ -76,9 +75,7 @@
       async function getCustom(url, opt) {
         url = await encodeURI(url);
         let target = `${http}://${window.location.host}/custom/${url}%3A%3A%3A69${opt}`;
-        console.log(target);
         let response = await fetch(target).then((response) => response.json());
-        console.log(response);
         if (response == true) {
           submit.disabled = true;
           ipbox.value = await `${http}://${window.location.host}/${opt}`;
