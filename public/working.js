@@ -6,7 +6,6 @@
       let alias = document.getElementById("alias");
       let url;
       let opt;
-      let hello = "hello";
       let loader = document.getElementById("loader")
       document.title = window.location.hostname + " | Shorten URL's with ease!";
       submit.addEventListener("click", getURL);
