@@ -151,6 +151,7 @@ function getCustom(url, opt) {
                     ipbox.select();
                     document.execCommand("copy");
                     submit.value = "Copied !";
+                    window.getSelection().empty();
                     document.getElementById("ta").innerHTML += r + "\r\n";
                     document.getElementById("loader").style.display = "none";
                     M.toast({
