@@ -109,6 +109,7 @@ function getShortID(url) {
                     ipbox.select();
                     document.execCommand("copy");
                     submit.value = "Copied !";
+                    window.getSelection().empty();
                     document.getElementById("ta").innerHTML += r + "\r\n";
                     M.toast({
                         html: "Copied to Clipboard!",
